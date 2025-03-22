@@ -43,4 +43,9 @@ Feature: sample karate test script
     # When method get
     # Then status 200
     # And match response contains user
+
+    Scenario: try to get a non-existing user (expected to fail)
+        Given path 'users/9999'
+        When method get
+        Then status 200
   
